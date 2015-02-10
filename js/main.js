@@ -6,23 +6,6 @@ var blueberries = {
     protein: '0.74 g',
 };
 
-var blueberries = [grapes, redcurrant];
-
-blueberries.forEach(function (item){
-document.write('<dl>');
-document.write('<dt>scientificidentification:</dt>');    
-document.write('<dd>' + item.scientificidentification + '</dd>');
-document.write('<dt>growsonshrub:</dt>');    
-document.write('<dd>' + item.growsonshrub + '</dd>');
-document.write('<dt>energy:</dt>');    
-document.write('<dd>' + item.energy + '</dd>');
-document.write('<dt>carbohydrates:</dt>');    
-document.write('<dd>' + item.carbohydrates + '</dd>');
-document.write('<dt>protein:</dt>');    
-document.write('<dd>' + item.protein + '</dd>');
-document.write('</dl>');
-
-});
 
 
 var grapes = {
@@ -40,4 +23,39 @@ var redcurrant = {
     energy: '234 kJ',
     carbohydrates: '13.8 g',
     protein: '1.4 g',
+};
+
+var berries = [blueberries, grapes, redcurrant];
+
+berries.forEach(function (item){
+document.write('<dl>');
+document.write('<strong><dt>scientificidentification:</dt></strong>');    
+document.write('<h2><dd>' + item.scientificidentification + '</dd></h2>');
+document.write('<dt>growsonshrub:</dt>');    
+document.write('<dd>' + item.growsonshrub + '</dd>');
+document.write('<dt>energy:</dt>');    
+document.write('<dd>' + item.energy + '</dd>');
+document.write('<dt>carbohydrates:</dt>');    
+document.write('<dd>' + item.carbohydrates + '</dd>');
+document.write('<dt>protein:</dt>');    
+document.write('<dd>' + item.protein + '</dd>');
+document.write('</dl>');
+
+});
+
+var writeberries = function (berryName) {
+    berries.forEach(function (item){
+document.write('<dl>');
+document.write('<strong><dt>scientificidentification:</dt></strong>');    
+document.write('<h2><dd>' + item.scientificidentification + '</dd></h2>');
+document.write('<dt>growsonshrub:</dt>');    
+document.write('<dd>' + item.growsonshrub + '</dd>');
+document.write('<dt>energy:</dt>');    
+document.write('<dd>' + item.energy + '</dd>');
+document.write('<dt>carbohydrates:</dt>');    
+document.write('<dd>' + item.carbohydrates + '</dd>');
+document.write('<dt>protein:</dt>');    
+document.write('<dd>' + item.protein + '</dd>');
+document.write('</dl>');
+});
 };
